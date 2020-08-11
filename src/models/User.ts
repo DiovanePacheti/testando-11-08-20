@@ -1,18 +1,21 @@
 import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
 
-@Entity()
-export class User {
+@Entity('users')
+export default class User {
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('increment')
     id: number;
 
     @Column()
-    firstName: string;
+    name: string;
 
     @Column()
-    lastName: string;
+    avatar: string;
 
     @Column()
-    age: number;
+    whatsapp: string;
+
+    @Column()
+    bio: string;
 
 }
